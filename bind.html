@@ -1,0 +1,48 @@
+<script>
+// const youtuber = {
+//         name: "Annu",
+//         content: "Education",
+//         feature: function(greet, greet2){
+//             console.log(`Hi this is a method, ${this.name}. In japan we ay thanks like ${greet} ${greet2}`);
+//         }
+// }
+
+// youtuber.feature("Arigato", "ojaimasu");
+
+// let youtuberFun = youtuber.feature;
+// youtuberFun("a", 'b'); // this won't work - use bind
+
+// // bind
+// let youtuberBind = youtuber.feature.bind(youtuber, 'blah', 'flah');
+// // bind method takes an object as an first argument and creates a new function.
+// youtuberBind();
+
+const youtuber1 = {
+    name: "Annu",
+    content: "Education",
+}
+const youtuber2 = {
+    name: "pooja",
+    content: "coorporate",
+}
+
+const youtuber3 = {
+    name: "ranjan",
+    content: "Medical",
+}
+
+function feature(greet){
+        console.log(`${greet == undefined ? "Hi" : greet} this is a method, ${this.name}. Content - ${this.content}`);
+}
+
+let yt1 = feature.bind(youtuber1, "Arigato");
+yt1();
+
+let yt2 = feature.bind(youtuber2);
+yt2();
+
+let yt3 = feature.bind(youtuber3);
+yt3();
+
+  
+</script>

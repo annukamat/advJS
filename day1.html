@@ -1,0 +1,22 @@
+<script>
+// hoisting
+// var job;
+// console.log(`I am a ${job}`);
+// job = "Web Developer";
+// console.log(`I am a ${job}`);
+
+var a = "hi";
+
+function fun1(){
+    var b = "hello";
+    fun2();
+
+    function fun2(){
+        var c = "bye";
+        console.log(a+b+c);
+    }
+}
+
+fun1();
+
+</script>

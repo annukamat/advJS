@@ -1,0 +1,12 @@
+<script>
+    const outerFun = (a) => {
+        let b = 10;
+
+        const innerFun = () => {
+            let sum = a+b;
+            console.log(sum);
+        }
+        innerFun();
+    }
+    outerFun(30);
+</script>

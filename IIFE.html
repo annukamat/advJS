@@ -1,0 +1,17 @@
+<script>
+    function authorName(){
+        var a = 5;
+        console.log('Author name is Annu');
+    }
+
+    authorName();
+    // console.log(a);
+
+    // IIFE
+    (function(name) {
+        // var name = "Annu Kamat";
+        console.log('Author name is ' + name);
+    }) ("Annu Kamat");
+
+    // console.log("name " + name); // name cannot be accesed protected by the IIFE(Imediately invoked function)
+</script>

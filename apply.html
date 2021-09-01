@@ -1,0 +1,31 @@
+<script>
+    const youtuber = {
+        name: "Annu",
+        content: "Education",
+        feature: function(greet, greet2){
+            console.log(`Hi this is a method ${this.name}, In japan we ay thanks like ${greet} ${greet2}`);
+        }
+    }
+
+    const youtuber1 = {
+        name: "pooja",
+        content: "NonEducation",
+        // feature: function(){
+        //     console.log(`Hi this is a method ${this.name}`);
+        // }
+
+        // DRY
+
+    }
+
+    youtuber.feature("Arigato", "ojaimasu");
+    youtuber.feature.apply(youtuber1, ["Arigato!", "blahhhh"]);
+
+    // ==========================================================================================================
+    let max = Math.max(100, 2, 3, 4, 5 ,8);
+
+    let applyMax = Math.max.apply(null, [1, 2, 3, 4, 500, 70]);
+    console.log(max);
+    console.log(applyMax);
+
+</script>

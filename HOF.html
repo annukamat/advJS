@@ -1,0 +1,27 @@
+<script>
+    const interviewQuestions = (name) => {
+        if(name == "Vinod"){
+            return function(topic) {
+                console.log(`Hi ${name}. Tell me about ${topic}`)
+            }
+        }else if(name == "thapa"){
+            return function(topic) {
+                console.log(`Hi ${name}. Tell me about ${topic}`)
+            }
+        }else if(name == "thapaTechnical"){
+            return function(topic) {
+                console.log(`Hi ${name}. Tell me about ${topic}`)
+            }
+        }else{
+            console.log("get lost!")
+        }
+    }
+
+    // interviewQuestions("Vinod")("Javascript");
+    // interviewQuestions("thapa")("React");
+    // interviewQuestions("thapaTechnical")("firebase");
+    // interviewQuestions("");
+
+    let cand = interviewQuestions("Vinod");
+    cand("Yourself");
+</script>
