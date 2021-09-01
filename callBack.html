@@ -1,0 +1,33 @@
+<script>
+    //CALLBACK HELL
+    // after 2s get the roll no.
+    // after 2s get the name and age
+    // after 2s get the gender
+
+    const getRollno = () => {
+        setTimeout(() => {
+            // rollno
+            console.log('API getting roll no.');
+            let rollNo = [1,2,3,4,5];
+            console.log(rollNo);
+
+            // name and age
+            setTimeout((rollno) => {
+                const data = {
+                    name: 'Annu Kamat',
+                    age: 21
+                }
+                console.log(`Hi, my name is ${data.name} and i am ${data.age} yrs old...roll no. - ${rollno}`);
+
+                // gender
+                setTimeout(() => {
+                    data.gender = 'female';
+                    console.log(`Hi, my name is ${data.name} and i am ${data.age} yrs old...roll no. - ${rollno}... Gender: ${data.gender}`);
+                }, 2000)
+            }, 2000, rollNo[1]);
+        }, 2000)
+    }
+
+    getRollno();
+
+</script>

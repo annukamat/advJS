@@ -1,0 +1,16 @@
+<script>
+
+const fun2 = () => {
+    setTimeout(() => {
+        console.log('function 2 is starting');
+    }, 3000)
+}
+
+const fun1 = () => {
+    console.log("function 1 is starting");
+    fun2();
+    console.log('function 1 is ending');
+}
+fun1();
+
+</script>

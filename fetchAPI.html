@@ -1,0 +1,26 @@
+<p id="apiIndia"></p>
+
+<script>
+    fetch('https://api.covid19api.com/summary')
+    .then((data) => {
+        // console.log(data);
+
+        // convert JS object
+        return data.json();
+    })
+    .then((apidata) => {
+        //India
+        console.log(apidata.Countries[76]);
+        const mydata = apidata.Countries[76];
+
+        document.getElementById('apiIndia').innerHTML = `Country: ${mydata.Country}. </br>
+                                                         Total cases: ${mydata.TotalConfirmed}.</br> 
+                                                         Total Recovered: ${mydata.TotalRecovered}`;
+    })
+    .catch((err) =>{
+        console.log(err);
+    })
+
+    
+
+</script>

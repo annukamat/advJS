@@ -1,0 +1,51 @@
+<script>
+        // executer
+    const pObj1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let rollNoArr = [1,2,3,4,5];
+            resolve(rollNoArr);
+            // reject('Something went wrong!');
+        }, 2000)
+    })
+
+    const getBioData = (rollno) => {
+        return new Promise((resolve, reject) => {
+            setTimeout((rollno) => {
+                let data = {
+                    name: 'Annu Kamat',
+                    qual: "Btech"
+                }
+
+                resolve(`My name is ${data.name}, rollno: ${rollno} and i am doing ${data.qual}!`);
+            },2000, rollno);
+        })
+    }
+
+    // promise consume
+    // pObj1.then((msg) => {
+    //     console.log(msg);
+    //     return getData(msg[1])
+    // }).then((info) => {
+    //     console.log(info);
+    // })
+    // .catch((err) => {
+    //     console.log(err)
+    // });
+
+    async function getData(){
+        const rollNoData = await pObj1;
+        console.log(rollNoData);
+
+        const bio = await getBioData(rollNoData[1]);
+        console.log(bio);
+
+        return bio;
+    }
+    const val = getData().then((a) => {
+        console.log(a);
+    });
+    // console.log(val);
+
+
+
+</script>
