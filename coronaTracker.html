@@ -1,3 +1,31 @@
 <script>
-    
+
+    // async function coronaTrack(){
+    //     const data = await fetch('https://api.covid19api.com/summary');
+    //     // console.log(data);
+    //     return data.json();
+
+    // }
+    // const dataFun = coronaTrack().then((apidata) => {
+    //     // console.log(apidata);
+    //     console.log(apidata.Countries[76].Country);
+    // });
+
+    async function coronaTrack(idx){
+        try {
+            const data = await fetch('https://api.covid19api.com/summary');
+            // console.log(data);
+
+            const jsData = await data.json();
+            console.log(jsData.Countries[idx].Country);
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+    coronaTrack(76);
+    coronaTrack(55);
+    coronaTrack(100);
+    coronaTrack(105);
+    coronaTrack(176);
+
 </script>
